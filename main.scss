@@ -18,15 +18,16 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     justify-content: space-between;
     flex-basis: 100px;
-    padding: 0px 2rem;
+    padding: 0px 32px;
     width: 100%;
     font-family: 'Titan One', cursive;
     color: #fff;
     background-color: #000;
     position: fixed;
-    top: 63px;
+    top: 0;
+    left:0;
+    right: 0;
     z-index: 1;
-    margin-top: -4.2rem;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
 }
 
@@ -49,7 +50,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .flex1 h2 {
-    font-size: 46px;
+    font-size: 35px;
     margin: 10px;
     font-family: 'Libre Bodoni', serif;
     font-weight: 300;
@@ -96,14 +97,17 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 100%;
     background-image: url('https://th.bing.com/th/id/R.595125b66ce9b9d727827fce5519f155?rik=AflzumOJeIUw%2fQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-CkerHiixlNA%2fTckqOBF80fI%2fAAAAAAAAAIk%2f7BQC0j0q0Yo%2fs1600%2ftop_fashion_modles_1440ST_7019.jpg&ehk=ybqai28HNz7zuzKlYO81GAjchSsy3GmkMHDCe%2fBXVBg%3d&risl=&pid=ImgRaw&r=0');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 100%;
-    margin-top: 4.3rem;
+    margin-top: 3.8rem;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
 }
 
 .container {
-    width: 44%;
+    padding: 8px;
+    width: 40%;
     max-width: 100%;
     position: absolute;
     top: 23%;
@@ -112,13 +116,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .container p {
-    padding: 12px 4rem 12px 0rem;
+    padding: 0;
+    margin: 0;
     word-wrap: no-wrap;
 }
 
-.container h2 {
-    font-size: 48px;
+.container h2:not(.h2-info) {
+    font-size: 35px;
     font-family: 'Libre Bodoni', serif;
+    text-transform: uppercase;
+    word-spacing: 6px;
+    font-family: 'Expletus Sans', cursive;
 }
 
 .line {
@@ -127,12 +135,28 @@ h1,h2,h3,h4,h5,h6 {
     border-bottom: 3px solid orange;
 }
 
+.container .h2-info {
+    font-size: 22px;
+    font-family: 'Expletus Sans', cursive;
+    font-weight: 300;
+}
+
+.container .h2-info span , .p-info span{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #53736A;
+    font-family: 'Expletus Sans', cursive;
+}
+
 .container p {
-    
-    font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 0;
-    word-spacing: 2px;
+    font-family: 'Expletus Sans', cursive;
+    font-size: 28px;
+    line-height: 50px;
+    letter-spacing: normal;
+    word-spacing: 4px;
+    font-weight: 500;
+    margin-top: 2rem;
 }
 
 .maincontainer {
@@ -191,7 +215,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .w3-bg2 {
     position: relative;
-    background-image: url("https://www.apetogentleman.com/wp-content/uploads/2021/12/malemodelsinstagram4.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2016/03/29/03/14/portrait-1287413__340.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -352,7 +376,7 @@ footer {
         width: 100%;
         max-width: 100%;
         z-index: 99;
-        top: 67px;
+        top: 0;
     }
     .flex1 h2{
         margin: 20px 0 20px -12px;
@@ -535,12 +559,12 @@ footer {
     left: 0;
 }
 .content {
-    margin: 0;
+    margin-top: 1px;
     height: 100vh;
     background-image: url('https://images.unsplash.com/photo-1515469446389-74ef48ae90b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
     background-size: cover;
-    background-position: left top;
-
+    background-position: left ;
+    display: block;
 }
 
 .content .container {
