@@ -182,8 +182,9 @@ h1,h2,h3,h4,h5,h6 {
     max-width: 100%;
     margin: 5rem auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 3rem;
+    padding: 2rem 12rem;
 }
 
 .container2 {
@@ -326,10 +327,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .container-vertical-line h2 {
     margin: 0px;
-    transform: translateX(-280px);
     transition: transform 750ms linear;
     color: #F9F9F9;
     font-size: 28px;
+    animation: textLeft 1s linear forwards;
+
 }
 
 .vertical-line {
@@ -339,19 +341,17 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #2C3639;
     border-radius: 1.2px;
     z-index: 1;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 300ms linear;
+    transition: transform 400ms linear;
+    animation: lineUp .3s linear forwards;
+    animation-delay: .9s;
 }
 
 .cart:hover h2{
-    transform: translate(0);
-    transition-delay: .5s;
+    animation: textRight .8s linear forwards;
 }
 
 .cart:hover .vertical-line {
-    transform: scaleY(1);
-    transition-delay: .2s;
+    animation: lineDown .1s linear forwards;
 }
 
 .cart a {
@@ -366,6 +366,46 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 3px;
 
 }
+
+@keyframes lineDown {
+    0% {
+      transform: translateY(-100px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textLeft {
+    0%{
+    }
+    100% {
+          transform: translateX(-280px);
+    }
+  }
+  
+  @keyframes lineUp {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+  
+  @keyframes textRight {
+    0% {
+      transform: translateX(-280px);
+  
+    }
+    100% {
+      transform: translateX(0);
+      transition-delay: 2s;
+    }
+  }
+  
 
 footer {
     margin-top: 2rem;
@@ -404,7 +444,7 @@ footer {
 @media screen and (max-width:1100px) {
     .content {
         min-height: 70vh;
-        background-position: center right;
+        background-position: right;
         &::after {
             opacity: .7;
         }
@@ -422,7 +462,7 @@ footer {
 
 /* Responsive */
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:800px) {
     .flex1 {
         position: fixed;
         width: 100%;
@@ -766,6 +806,7 @@ footer {
     word-spacing: 8px;
 }
 .ourgallery .grid {
+    display: grid;
     grid-template-columns: repeat(1,1fr);
     justify-content: center;
 }
