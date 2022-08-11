@@ -140,11 +140,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .container h2:not(.h2-info) {
+    outline: 7px solid #fff;
+    padding: 17px;
+    width: 100%;
+    max-width: max-content;
     font-size: 35px;
     font-family: 'Libre Bodoni', serif;
     text-transform: uppercase;
     word-spacing: 6px;
     font-family: 'Expletus Sans', cursive;
+    & >  span {
+        color: #f4a7bb;
+    }
 }
 
 .line {
@@ -163,7 +170,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #53736A;
+    color: #f4a7bb;
     font-family: 'Expletus Sans', cursive;
 }
 
@@ -833,5 +840,8 @@ footer .flex-left {
     width: 100%;
     max-width: 100%;
 }
+
+
+
 
 }
