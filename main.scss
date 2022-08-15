@@ -293,13 +293,49 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 0 .3rem 3rem;
 }
 
+.container-3 {
+    margin: 3rem 0 3rem 0;
+    & > .w3-grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 12px 2rem;
+        gap: 12px;
+        place-items: center;
+        & > .grid-content {
+            margin-left: 3rem;
+        }
+        & > .grid-content > h2 {
+            margin-top: 0;
+            letter-spacing: 2px;
+            font-size: 30px;
+        }
+        & > .grid-content > p {
+            line-height: 30px;
+            font-family: 'Expletus Sans', cursive;
+            font-size: 14px;
+            padding: 4px 1rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+            word-break: break-all;
+            word-spacing: 4px;
+        }
+        & > img {
+            width: 100%;
+            max-width: 450px;
+            border-top-right-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+            filter: grayscale(5%);
+        }
+    }
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
     padding: 12px 5rem 12px 5rem;
     margin: 22px 0 22px 0;
-    grid-gap: 12px;
+    grid-gap: 22px;
 }
 .grid .cart {
     border-radius: 8px;
@@ -768,11 +804,50 @@ footer {
     margin-top: 3rem;
 }
 
+.container-3 {
+    margin-top: 0;
+    & > .w3-grid {
+        display: block;
+        padding: 12px 0rem;
+        & > .grid-content {
+            margin: 0rem;    
+            padding: 1.5rem;   
+        }
+        & > .grid-content > h2 {
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 20px;
+            color: red;
+        }
+        & > .grid-content > p {
+            line-height: 24px;
+            font-family: 'Expletus Sans', cursive;
+            font-size: 12px;
+            padding: 4px 1rem;
+            margin-top: 0;
+            letter-spacing: 1px;
+            word-break: break-all;
+            word-spacing: 4px;
+        }
+        & > img {
+            width: 100%;
+            display: block;
+            max-width: 320px;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: -8px 4px 15px  rgba(0,0,0,.5) ;
+            margin: 0 auto;
+            filter: grayscale(20%);
+        }
+    }
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(1,1fr);
     place-items: center;
-    padding: 12px 3rem 12px 3rem;
+    padding: 10px 3rem 12px 3rem;
     margin: 22px 0 22px 0;
     grid-gap: 12px;
 }
@@ -799,7 +874,7 @@ footer {
     font-size: 8px;
 }
 .ourgallery {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .ourgallery .w3-heading {
