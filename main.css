@@ -319,18 +319,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 4rem;
   display: -ms-grid;
   display: grid;
+  width: 100%;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[5];
       grid-template-rows: repeat(5, 1fr);
-  grid-gap: 1.4rem;
+  gap: 1.4rem;
+  place-items: center;
 }
 
 .masonary-grid > img {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 3px;
 }
 
 .masonary-grid > img:nth-of-type(2) {
@@ -345,8 +348,8 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-column: 1;
   grid-column: 1 / 1;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2 / span 3;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
 }
 
 .masonary-grid > img:nth-of-type(5) {
@@ -361,8 +364,8 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-column: 3;
   grid-column: 3 / 3;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
-  grid-row: 2 / span 3;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
 }
 
 .masonary-grid > img:nth-of-type(7) {
